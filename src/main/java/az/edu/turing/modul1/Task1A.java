@@ -21,12 +21,13 @@ public class Task1A {
         String name = sc.nextLine();
 
         System.out.println("Enter the number you want to,between 0 and 100");
-        Integer number = sc.nextInt();
+        int number = sc.nextInt();
+        sc.nextLine();
 
         int[] numbers = new int[100];
         int count = 0;
-        numbers[count] = number;
         count++;
+
 
         while (randomNumber != number) {
 
@@ -44,8 +45,9 @@ public class Task1A {
             count++;
 
 
+
         }
-        int finalArrays[] = Arrays.copyOf(numbers, count);
+        int[] finalArrays = Arrays.copyOf(numbers, count);
         Arrays.sort(finalArrays);
 
         System.out.println("\nCongrats " + name.toUpperCase() + "! You have won the game after " + count + " times!\n");

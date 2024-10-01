@@ -35,7 +35,7 @@ public class Task2B {
                 case 1: {
                     System.out.println("Enter the number of  day  in week:");
                     int numberDay = scanner.nextInt();
-                    while (numberDay < 0 || numberDay > 6) {
+                    while (numberDay < 0 || numberDay >6) {
                         System.out.println("Please,Number has been between 0 and 6");
                         numberDay = scanner.nextInt();
                     }
