@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Task1A {
+public class NumberGuess {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -26,26 +26,18 @@ public class Task1A {
 
         int[] numbers = new int[100];
         int count = 0;
-        count++;
-
 
         while (randomNumber != number) {
 
             if (number < 0 || number > 100) {
                 System.out.println("Invalid Input!");
-                number = sc.nextInt();
             } else if (number > randomNumber) {
                 System.out.println("Your entered number is small,please ,try again!");
-                number = sc.nextInt();
             } else {
                 System.out.println("Your entered number is large,please ,try again");
-                number = sc.nextInt();
             }
-            numbers[count] = number;
-            count++;
-
-
-
+            numbers[count++] = number;
+            number = sc.nextInt();
         }
         int[] finalArrays = Arrays.copyOf(numbers, count);
         Arrays.sort(finalArrays);

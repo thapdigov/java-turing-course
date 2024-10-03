@@ -2,27 +2,14 @@ package az.edu.turing.modul1;
 
 import java.util.Scanner;
 
-public class Task2B {
+public class WeekPlaner {
+    public static String[][] weeks = new String[7][2];
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("---------Welcome to the Week's planner----------");
-        String[][] weeks = new String[7][2];
-        weeks[0][0] = "Sunday";
-        weeks[0][1] = "do home Work!";
-        weeks[1][0] = "Monday";
-        weeks[1][1] = "learning English ";
-        weeks[2][0] = "Tuesday";
-        weeks[2][1] = "watching film";
-        weeks[3][0] = "Wednesday";
-        weeks[3][1] = "work in DataStructures";
-        weeks[4][0] = "Thursday";
-        weeks[4][1] = "have a fun with friends";
-        weeks[5][0] = "Friday";
-        weeks[5][1] = "go to the fitness";
-        weeks[6][0] = "Saturday";
-        weeks[6][1] = "run in the morning!";
-
+        weekPlaner();
         while (true) {
             System.out.println("""
                     Choose the Menu:
@@ -35,7 +22,7 @@ public class Task2B {
                 case 1: {
                     System.out.println("Enter the number of  day  in week:");
                     int numberDay = scanner.nextInt();
-                    while (numberDay < 0 || numberDay >6) {
+                    while (numberDay < 0 || numberDay > 6) {
                         System.out.println("Please,Number has been between 0 and 6");
                         numberDay = scanner.nextInt();
                     }
@@ -63,6 +50,24 @@ public class Task2B {
             }
         }
 
+
+    }
+
+    public static void weekPlaner() {
+        weeks[0][0] = "Sunday";
+        weeks[0][1] = "do home Work!";
+        weeks[1][0] = "Monday";
+        weeks[1][1] = "learning English ";
+        weeks[2][0] = "Tuesday";
+        weeks[2][1] = "watching film";
+        weeks[3][0] = "Wednesday";
+        weeks[3][1] = "work in DataStructures";
+        weeks[4][0] = "Thursday";
+        weeks[4][1] = "have a fun with friends";
+        weeks[5][0] = "Friday";
+        weeks[5][1] = "go to the fitness";
+        weeks[6][0] = "Saturday";
+        weeks[6][1] = "run in the morning!";
 
     }
 }
