@@ -1,7 +1,7 @@
 package az.edu.turing.oop;
 
 
-import java.util.Comparator;
+import java.util.Arrays;
 
 public class User {
 
