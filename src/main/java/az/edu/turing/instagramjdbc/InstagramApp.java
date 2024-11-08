@@ -1,19 +1,17 @@
 package az.edu.turing.instagramjdbc;
 
-import az.edu.turing.instagramjdbc.config.AbstractDao;
-import az.edu.turing.instagramjdbc.entity.User;
-
-import java.util.List;
+import az.edu.turing.instagramjdbc.controller.UserController;
+import az.edu.turing.instagramjdbc.dao.impl.UserDaoImpl;
+import az.edu.turing.instagramjdbc.service.UserServiceImpl;
 
 public class InstagramApp {
     public static void main(String[] args) {
 
-        User user = new User(3,"davud", "6336");
+        UserDaoImpl userDao = new UserDaoImpl();
+        UserServiceImpl userService = new UserServiceImpl(userDao);
+        UserController userController = new UserController(userService);
 
-
-
-       List<User> userList= AbstractDao.getUserDao().getAllUsers();
-        System.out.println(userList);
+        System.out.println(userController.getAllUserDtoList());
 
     }
 }

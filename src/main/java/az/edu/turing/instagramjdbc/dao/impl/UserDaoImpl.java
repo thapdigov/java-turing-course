@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +21,7 @@ public class UserDaoImpl extends AbstractDao implements UserDaoInterface {
             prepareStatement.setString(3, user.getUserGender());
             prepareStatement.setString(4, user.getUserEmail());
             int i = prepareStatement.executeUpdate();
-            System.out.println(i + "row add!");
+            System.out.println(i + " row add!");
 
 
         } catch (SQLException e) {
